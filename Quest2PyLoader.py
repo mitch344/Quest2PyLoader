@@ -45,7 +45,7 @@ os.system('adb start-server')
 label = tk.Label(root, text='Connect the Quest Headset and Allow USB Debugging inside the headset', fg='red')
 label.pack()
 
-listbox = tk.Listbox(root)
+listbox = tk.Listbox(root, width=50)
 listbox.pack(fill=tk.BOTH, expand=True, padx=10)
 
 push_button = tk.Button(root, text='Push Folder', command=push)
