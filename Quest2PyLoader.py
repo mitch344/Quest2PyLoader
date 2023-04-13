@@ -64,7 +64,7 @@ listbox.pack(fill=tk.BOTH, expand=True, padx=10)
 push_button = tk.Button(root, text='Push Folder', command=push)
 push_button.pack()
 
-delete_button = tk.Button(root, text='Delete', command=delete)
+delete_button = tk.Button(root, text='Delete Folder', command=delete)
 delete_button.pack()
 
 install_button = tk.Button(root, text='Install APK', command=install)

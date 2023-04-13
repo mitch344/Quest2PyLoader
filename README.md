@@ -1,20 +1,31 @@
 # Quest2PyLoader
-A tiny sideloader for the Quest2. Please install ADB platform tools before using.
-******************************************
-<b>Install ADB Platform tools by:</b>
+A tiny sideloader for the Quest2. Most sideloader applications come with alot of bloat and usually an app marketplace. Quest2PyLoader removes this 
+and just creates an easy way to use the ADB commands to install your homebrew applications to your Quest device.
+</br>
+</br>
+<b>1.) Setup Developer Mode on you Oculus Device:</b>
+</br>
+https://developer.oculus.com/documentation/native/android/mobile-device-setup/
+</br>
+</br>
+<b>2.) Install ADB Platform tools by:</b>
 </br></br>
 <b>Mac:</b>
-</br>
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 </br>
 brew install --cask android-platform-tools
 </br></br>
 <b>Linux via APT:</b>
 </br>
 sudo apt-get install android-tools-adb -y
-******************************************
+</br>
+</br>
+<b>Windows</b>
+https://developer.oculus.com/downloads/package/oculus-adb-drivers/
+</br>
+</br>
 <b>Run Quest2PyLoader by:</b>
 </br>
-python Quest2PyLoader.py
+<i>python Quest2PyLoader.py</i> or with <i>python3 Quest2PyLoader.py</i>
+</br>
 </br>
 <img src="https://raw.githubusercontent.com/MitchellKopczyk/Quest2PyLoader/main/image.png" width="500" height="350"> 
