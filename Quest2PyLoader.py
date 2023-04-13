@@ -36,6 +36,19 @@ def install():
         result = subprocess.check_output(f'adb install -r "{file}"', shell=True).decode()
         label.config(text=result)
 
+
+def delete():
+    selected_item = listbox.get(listbox.curselection())
+    if selected_item:
+        selected_item = selected_item.replace(' ', '\\ ')
+        label.config(text=f'Deleting {selected_item}...')
+        result = os.system(f'adb shell rm -r "/storage/emulated/0/Android/data/{selected_item}"')
+        if result == 0:
+            label.config(text='deleted!')
+        else:
+            label.config(text='An error occurred while deleting the folder.')
+        update_list()
+
 root = tk.Tk()
 root.title('Quest2PyLoader')
 
@@ -50,6 +63,9 @@ listbox.pack(fill=tk.BOTH, expand=True, padx=10)
 
 push_button = tk.Button(root, text='Push Folder', command=push)
 push_button.pack()
+
+delete_button = tk.Button(root, text='Delete', command=delete)
+delete_button.pack()
 
 install_button = tk.Button(root, text='Install APK', command=install)
 install_button.pack()
