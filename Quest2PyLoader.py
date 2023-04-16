@@ -19,6 +19,8 @@ def update_list():
         listbox.insert(tk.END, item)
 
 def push():
+    label.config(text=' ')
+    root.update()
     folder = filedialog.askdirectory()
     if folder:
         label.config(text='Pushing folder...')
@@ -26,18 +28,23 @@ def push():
         if result == 0:
             label.config(text='Folder pushed!')
         else:
-            label.config(text='An error occurred while pushing the folder.')
+            label.config(text='An error occurred while pushing the folder.', fg='red')
         update_list()
 
 def install():
+    label.config(text=' ')
+    root.update()
     file = filedialog.askopenfilename(filetypes=[('APK files', '*.apk')])
     if file:
         label.config(text='Installing APK...')
         result = subprocess.check_output(f'adb install -r "{file}"', shell=True).decode()
         label.config(text=result)
+        update_list()
 
 
 def delete():
+    label.config(text=' ')
+    root.update()
     selected_item = listbox.get(listbox.curselection())
     if selected_item:
         selected_item = selected_item.replace(' ', '\\ ')
@@ -46,7 +53,7 @@ def delete():
         if result == 0:
             label.config(text='deleted!')
         else:
-            label.config(text='An error occurred while deleting the folder.')
+            label.config(text='An error occurred while deleting the folder.', fg='red')
         update_list()
 
 root = tk.Tk()
