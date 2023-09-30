@@ -10,6 +10,14 @@ https://developer.oculus.com/documentation/native/android/mobile-device-setup/
 </br>
 <b>2.) Install ADB Platform tools by:</b>
 </br></br>
+<b>Windows:</b>
+</br>
+Download: https://developer.android.com/tools/releases/platform-tools
+</br>
+Extract to C: so it's C:\platform-tools
+</br>
+Run Powershell as Admin type: setx PATH "%PATH%;C:\platform-tools"
+</br></br>
 <b>Mac:</b>
 </br>
 brew install --cask android-platform-tools
@@ -18,11 +26,13 @@ brew install --cask android-platform-tools
 </br>
 sudo apt-get install android-tools-adb -y
 </br>
+
+<b>3.) Drivers for Windows</b>
 </br>
-<b>Windows</b>
 https://developer.oculus.com/downloads/package/oculus-adb-drivers/
 </br>
 </br>
+<b>4.) Run </b>
 <b>Run Quest2PyLoader by:</b>
 </br>
 <i>python Quest2PyLoader.py</i> or with <i>python3 Quest2PyLoader.py</i>
