@@ -38,4 +38,4 @@ https://developer.oculus.com/downloads/package/oculus-adb-drivers/
 <i>python Quest2PyLoader.py</i> or with <i>python3 Quest2PyLoader.py</i>
 </br>
 </br>
-<img src="https://raw.githubusercontent.com/MitchellKopczyk/Quest2PyLoader/main/image.png" width="500" height="350"> 
+<img src="https://raw.githubusercontent.com/MitchellKopczyk/Quest2PyLoader/main/quest2py.png" width="500" height="350"> 
